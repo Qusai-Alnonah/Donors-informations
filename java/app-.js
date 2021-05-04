@@ -11,4 +11,4 @@ function Donation(name,age,amount){
   this.age= 0;
 }
 
-let firstDonor = new.Donation('Ahmad','20','100');
+let firstDonor = new Donation('Ahmad','20','100');
