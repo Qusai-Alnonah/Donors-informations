@@ -70,9 +70,11 @@ function saveTols(){
 }
 function gettingDonortionFormLs(){
   // to do not have null order []
-  let data = localStorage.getItem('donorSaved'||"[]");
+  let data = localStorage.getItem('donorSaved');//||"[]"
   Donation.Amount= donors;
-  renderTabledonor();
+  if(donors !== null){
+    renderTabledonor();
+  }
 }
 function renderTabledonor(){
   donors.textContent =' ';

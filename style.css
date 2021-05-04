@@ -6,7 +6,15 @@ header h1{
    text-align: center;
    font-family: 'Roboto', sans-serif;
    font-size: x-large;
+  
    
+}
+header{
+    background-color:royalblue;
+    width: 100%;
+    height: 90%;
+    
+
 }
  main table{
    
@@ -16,4 +24,17 @@ header h1{
   
  footer{
      text-align: center;
+     
+     
  }
+ form{
+    border: 1px solid black;
+    width: 30%;
+    
+ }
+  
+#donortable{
+    position: absolute;
+    right: 10%;
+    top: 10%;
+}
