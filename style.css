@@ -1,0 +1,19 @@
+*{
+    background-image:url("image/donate-background.jpg"); ;
+background: size 200px;
+}
+header h1{
+   text-align: center;
+   font-family: 'Roboto', sans-serif;
+   font-size: x-large;
+   
+}
+ main table{
+   
+        border: 1px solid black;
+      
+ }
+  
+ footer{
+     text-align: center;
+ }
