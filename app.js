@@ -8,7 +8,7 @@ function getRandomIntInclusive(min, max) {
 }
 
 let contanerAll =document.getElementById('contaner');
-let arrOfobiects=[];
+var arrOfobiects=[];
 function Donation(name,amount){
   this.name =name;
   this.amount =amount;
@@ -23,7 +23,7 @@ let Mohammad =new Donation('Mohammad','500');
 let Mostafa =new Donation('Mostafa','1000');
 
 Donation.prototype.getAge =
-function genretorAge(){
+function genrateAge(){
   this.age = getRandomIntInclusive(18,30);
 };
 
@@ -56,12 +56,13 @@ Donation.prototype.renderTable = function (){
 Donation.Amount=[];
 const form =document.getElementById('donation-form');
 form.addEventListener('submit',handleSubmitting);
+
 function handleSubmitting(event){
   event.preventDefault();
   let newDonorName =event.target.nameField.value;
   let Amount =event.target.AmountFiled.value;
   let newDonor = new Donation(newDonorName,Amount);
-  newDonor.genretorAge();
+  newDonor. getAge();
   newDonor.renderTable();
 }
 function saveTols(){
@@ -87,7 +88,7 @@ function renderTabledonor(){
   }
 }
 for(let i =0;i<arrOfobiects.length;i++){
-  arrOfobiects[i].genretorAge();
+  arrOfobiects[i].getAge();
   arrOfobiects[i].renderTable();
 }
 
