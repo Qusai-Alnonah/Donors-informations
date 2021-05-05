@@ -30,11 +30,13 @@ header{
  footer{
      
      position: absolute;
+     bottom: 0px;
      margin-top: 15px;
      background-color:brown ;
      text-align: center;
      width: 100%;
-     
+     height: 10%;
+     margin-top: 10px;     
      
  }
  form{
@@ -42,8 +44,13 @@ header{
     width: 30%;
     position: absolute;
    right: 700px;
-    margin-top: 15px;
+   
     
+ }
+ footer h2{
+    text-align: center;
+    position: absolute;
+     margin-top: 3px;
  }
   
 #donortable{
