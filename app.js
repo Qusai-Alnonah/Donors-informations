@@ -41,7 +41,7 @@ Donation.prototype.renderTable = function (){
   let th1 =document.createElement('th');
   tr.appendChild(th1);
   th1.textContent = 'Amount';
-  for(let i =0; i<arrOfobiects.length;i++){
+  for(let i =0; i<1;i++){
     let tr1=document.createElement('tr');
     donortable.appendChild(tr1);
     tr1.textContent = this.name;
