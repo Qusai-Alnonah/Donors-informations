@@ -1,6 +1,6 @@
 html{
     background-image:url("image/donate-background.jpg"); ;
-    z-index:4;
+    /* z-index:4; */
     background: size 200px;
 
 
@@ -13,13 +13,10 @@ header h1{
    
 }
 header{
-    background-color:rgb(196, 170, 170);
+    background-color:rgba(96, 96, 96,0.8);
     width: 100%;
     height: 100px;
     
-
-    
-
 }
  main table{
    
@@ -29,6 +26,7 @@ header{
        width: unset;
        right: auto;
        margin-left: 900px;
+       background-color: rgba(96, 96, 96,0.8);
        
  }
   
@@ -37,7 +35,7 @@ header{
      position: absolute;
      bottom: 0px;
      margin-top: 15px;
-     background-color:brown ;
+     background-color:rgba(96, 96, 96,0.8) ;
      text-align: center;
      width: 100%;
      height: 10%;
@@ -51,6 +49,7 @@ header{
     position: absolute;
    right: 900px;
    margin-top: 15px;
+   background-color: rgba(96, 96, 96,0.8);
  }
  footer h2{
   

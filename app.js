@@ -54,8 +54,8 @@ Donation.prototype.renderTable = function (){
   }
 };
 Donation.Amount=[];
-const form =document.getElementById('donation-form');
-form.addEventListener('submit',handleSubmitting);
+const form =document.getElementById('donation-Form');
+form.addEventListener('Submit',handleSubmitting);
 
 function handleSubmitting(event){
   event.preventDefault();
