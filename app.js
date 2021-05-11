@@ -18,9 +18,9 @@ function Donation(name,amount){
   saveTols();
 }
 
-let Ahmad = new Donation('Ahmad','100');
-let Mohammad =new Donation('Mohammad','500');
-let Mostafa =new Donation('Mostafa','1000');
+new Donation('Ahmad','100');
+new Donation('Mohammad','500');
+new Donation('Mostafa','1000');
 
 Donation.prototype.getAge =
 function genrateAge(){
@@ -92,3 +92,12 @@ for(let i =0;i<arrOfobiects.length;i++){
   arrOfobiects[i].renderTable();
 }
 
+const newone = document.getElementById('');
+newone.addEventListener('submit',function(event){
+  event.preventDefault();
+  const donarName =event.target.name.value;
+  const Amount = parseInt(event.target.Amount.value);
+  const donation =new Donation(name,Amount);
+  donation.renderTable();
+
+});

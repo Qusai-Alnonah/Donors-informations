@@ -18,9 +18,9 @@ function Donation(name,amount){
 //   saveTols();
 }
 
-let Ahmad = new Donation('Ahmad','100');
-let Mohammad =new Donation('Mohammad','500');
-let Mostafa =new Donation('Mostafa','1000');
+new Donation('Ahmad','100');
+new Donation('Mohammad','500');
+new Donation('Mostafa','1000');
 
 Donation.prototype.getAge =
 function genrateAge(){

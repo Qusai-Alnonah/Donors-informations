@@ -1,5 +1,5 @@
 html{
-    background-image:url("image/donate-background.jpg"); ;
+    background-image:url("/image/donate-background.jpg"); ;
     /* z-index:4; */
     background: size 200px;
 
@@ -16,10 +16,11 @@ header{
     background-color:rgba(96, 96, 96,0.8);
     width: 100%;
     height: 100px;
+     
     
 }
  main table{
-   
+        position: relative;  
         border: 1px solid black;
        text-align: center;
        height: inherit;
@@ -50,6 +51,7 @@ header{
    right: 900px;
    margin-top: 15px;
    background-color: rgba(96, 96, 96,0.8);
+   z-index: 3;
  }
  footer h2{
   
