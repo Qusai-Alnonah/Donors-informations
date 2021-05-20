@@ -12,14 +12,43 @@ header h1{
   
    
 }
+
 header{
     background-color:rgba(96, 96, 96,0.8);
     width: 100%;
     height: 100px;
+  
      
     
+
 }
- main table{
+main{
+    display: -ms-flexbox;
+    justify-content: center;
+}
+table {
+    margin-top: 150px;
+    position: absolute;
+    width: 100%;
+    color: rgba(96, 96, 96,0.8);
+    border: solid 1px rgba(96, 96, 96,0.8);
+    border-radius: 1%;
+
+}
+
+table tr td, table tr th {
+    text-align: left;
+    border: solid 1px rgba(96, 96, 96,0.8);
+    padding: 5px;
+    margin: 5%;
+}
+
+table tr th {
+    text-align: center;
+}
+
+
+ /* main table{
         position: relative;  
         border: 1px solid black;
        text-align: center;
@@ -29,7 +58,7 @@ header{
        margin-left: 900px;
        background-color: rgba(96, 96, 96,0.8);
        
- }
+ } */
   
  footer{
      

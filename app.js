@@ -1,5 +1,7 @@
 /* eslint-disable no-unused-vars */
 'use strict';
+let arrOfobiects=[];
+let newDonaration=[];
 const donors =document.getElementById('donors');
 function getRandomIntInclusive(min, max) {
   min = Math.ceil(min);
@@ -7,28 +9,59 @@ function getRandomIntInclusive(min, max) {
   return Math.floor(Math.random() * (max - min + 1) + min); //The maximum is inclusive and the minimum is inclusive
 }
 
-let contanerAll =document.getElementById('contaner');
-var arrOfobiects=[];
+function genrateAge(){
+  this.age = getRandomIntInclusive(18,30);
+}
+const arrOfDonars=[];
 function Donation(name,amount){
-  this.name =name;
-  this.amount =amount;
-  this.age= 0;
-  this.newArr=[];
-  arrOfobiects.push(this);
+  this.name=name;
+  this.amount=amount;
+  this.age=genrateAge();
+  this.newDonaration=[];
+  this.newDonaration.push(this.name);
+  this.newDonaration.push(this.age);
+  this.newDonaration.push(this.amount);
+  arrOfDonars.push(this);
+  console.log(newDonation);
   saveTols();
 }
+
+
+// var arrOfobiects=[];
+// let arrOfname=[];
+// let arrOfage=[];
+// let arrOfamount=[];
+// function Donation(name,amount){
+//   this.name =name;
+//   this.amount =amount;
+//   this.age= 0;
+//   this.newArr=[];
+//   arrOfobiects.push(this);
+
+
+// }
 
 new Donation('Ahmad','100');
 new Donation('Mohammad','500');
 new Donation('Mostafa','1000');
 
-Donation.prototype.getAge =
-function genrateAge(){
-  this.age = getRandomIntInclusive(18,30);
-};
+
+Donation.Amount=[];
+const form =document.getElementById('donation-Form');
+form.addEventListener('Submit',handleSubmitting);
+
+function handleSubmitting(event){
+  event.preventDefault();
+  let newDonorName =event.target.nameField.value;
+  let amount =event.target.amountFiled.value;
+  let newDonor = new Donation(newDonorName,amount);
+  newDonor. getAge();
+  newDonor.renderTable();
+  saveTols();
+}
 
 
-
+let contanerAll =document.getElementById('contaner');
 Donation.prototype.renderTable = function (){
   let donortable = document.createElement('table');
   contanerAll.appendChild(donortable);
@@ -53,18 +86,6 @@ Donation.prototype.renderTable = function (){
     th3.textContent = this.amount;
   }
 };
-Donation.Amount=[];
-const form =document.getElementById('donation-Form');
-form.addEventListener('Submit',handleSubmitting);
-
-function handleSubmitting(event){
-  event.preventDefault();
-  let newDonorName =event.target.nameField.value;
-  let Amount =event.target.AmountFiled.value;
-  let newDonor = new Donation(newDonorName,Amount);
-  newDonor. getAge();
-  newDonor.renderTable();
-}
 function saveTols(){
   let arrStr=JSON.stringify(Donation.Amount);
   localStorage.setItem('donorSaved',arrStr);
