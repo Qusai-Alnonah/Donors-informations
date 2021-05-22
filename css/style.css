@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 html{
     background-image:url("/image/donate-background.jpg"); ;
     /* z-index:4; */
@@ -27,12 +29,15 @@ main{
     justify-content: center;
 }
 table {
+    border: 3px solid black;
     margin-top: 150px;
     position: absolute;
-    width: 100%;
-    color: rgba(96, 96, 96,0.8);
-    border: solid 1px rgba(96, 96, 96,0.8);
-    border-radius: 1%;
+    right: 100px;
+    width: 50%;
+    color: #eee;
+    background-color: rgba(96, 96, 96,0.8);;
+    border: solid 1px 
+    
 
 }
 
@@ -74,6 +79,7 @@ table tr th {
      
  }
  form{
+    color:#eee;
     border: 1px solid black;
     width: 30%;
     position: absolute;

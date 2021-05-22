@@ -1,22 +1,21 @@
 'use strict';
-
-let arrofDonation =[];
-let donarTable = document.getElementById('donortable');
-
-function Donation(name , Amount){
-  this.name=name;
-  this.Age = randomGenerator();
-  this.Amount=Amount;
-  this.tableInfo =[];
-  this.tableInfo.push(this.name);
-  this.tableInfo.push(this.Age);
-  this.tableInfo.push(this.Amount);
-  arrofDonation.push(this);
-}
-
 function randomGenerator(){
   return Math.floor(Math.random() *13 +18);
 
+}
+let arrofDonation =[];
+let donarTable = document.getElementById('donortable');
+let total =0;
+
+function Donation(Name , Amount){
+  this.Name=Name;
+  this.Age = randomGenerator();
+  this.Amount=Amount;
+  this.tableInfo =[];
+  this.tableInfo.push(this.Name);
+  this.tableInfo.push(this.Age);
+  this.tableInfo.push(this.Amount);
+  arrofDonation.push(this);
 }
 
 getFormLs();
@@ -24,12 +23,11 @@ renderTable();
 
 let form =document.getElementById('donationForm');
 form.addEventListener('submit',handleDonrationSubmit);
-
 function handleDonrationSubmit(event){
   event.preventDefault();
-  let name =event.target.name.value;
+  let Name =event.target.Name.value;
   let Amount = parseInt (event.target.Amount.value);
-  let newDonation =new Donation(name,Amount);
+  let newDonation =new Donation(Name,Amount);
   newDonation.renderDonation();
   saveToLs();
 }
@@ -44,14 +42,20 @@ Donation.prototype.renderDonation =function(){
     tableRow.appendChild(tdEl);
     tdEl.textContent =this.tableInfo[i];
   }
+  total += parseInt(this.tableInfo[2]);
   let lastTableRow =document.createElement('tr');
   donarTable.appendChild(lastTableRow);
+  let totalTd =document.createElement('td');
+  lastTableRow.appendChild(totalTd);
+  totalTd.setAttribute('id','totalCell');
+  totalTd.setAttribute('colspan','3');
+  totalTd.textContent =`Total: ${total}`;
 
 
 };
 
 function saveToLs(){
-  // eslint-disable-next-line no-unused-vars
+
   let storageArr = JSON.stringify(arrofDonation);
   localStorage.setItem('donationInfo',storageArr);
 }
@@ -74,13 +78,16 @@ function renderTable(){
       tdEl =document.createElement('td');
       tableRow.appendChild(tdEl);
       tdEl.textContent =arrofDonation[j].tableInfo[i];
-
+      if(i === arrofDonation[j].tableInfo.length-1){
+        total += parseInt(arrofDonation[j].tableInfo[i]);
+      }
     }
   }
-
+  console.log(total);
+  let lastTableRow =document.createElement('tr');
+  donarTable.appendChild(lastTableRow);
+  let totalTd =document.createElement('td');
+  lastTableRow.appendChild(totalTd);
+  totalTd.setAttribute('colspan','3');
+  totalTd.textContent =`Total: ${total};`;
 }
-
-// let lastTableRow =document.createElement('tr');
-// donarTable.appendChild(lastTableRow);
-
-
